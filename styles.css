@@ -132,6 +132,7 @@ header {
 /* FORM STARTS */
 
 form {
+    height: 50%;
     padding: 30px;
     margin-top: 3.2rem;
     font-size: 13px;
@@ -200,6 +201,7 @@ input {
 .button {
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
+    cursor: pointer;
 }
 
 /* FORM ENDS */
