@@ -138,6 +138,8 @@ header {
 /* FORM STARTS */
 
 form {
+    width: 100%;
+    height: -webkit-fill-available;
     padding: 30px;
     font-size: 13px;
     text-transform: uppercase;
