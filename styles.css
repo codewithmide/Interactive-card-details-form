@@ -7,8 +7,9 @@
 }
 
 body, html {
-    width: 600px;
+    width: 375px;
     height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 0;
