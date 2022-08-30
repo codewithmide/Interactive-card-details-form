@@ -101,12 +101,11 @@ header {
 }
 
 .card-number > h1 {
-    font-size: 18px;
+    font-size: 14px;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
     margin-bottom: .5rem;
     word-spacing: 1.5px;
-    text-align: center;
 }
 
 .name-and-expirydate {
