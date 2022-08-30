@@ -2,17 +2,19 @@
 
 * {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
     font-family: 'Space Grotesk', sans-serif;
+}
+
+html {
+    height: -webkit-fill-available;
 }
 
 body {
     width: 375px;
-    height: 100vh;
-    min-height: 100vh;
+    height: -webkit-fill-available;;
     display: flex;
     flex-direction: column;
-    padding: 0;
     overflow-x: hidden;
 }
 
