@@ -14,7 +14,7 @@ html {
 
 body {
     width: 375px;
-    height: -webkit-fill-available;;
+    height: -webkit-fill-available;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -138,7 +138,6 @@ header {
 /* FORM STARTS */
 
 form {
-    height: 80%;
     padding: 30px;
     font-size: 13px;
     text-transform: uppercase;
