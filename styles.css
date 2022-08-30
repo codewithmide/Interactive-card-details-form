@@ -209,7 +209,6 @@ input {
 .attribution {
     font-size: 11px;
     text-align: center;
-    position: fixed;
     bottom: 1rem;
     width: 100%;
 }
