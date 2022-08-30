@@ -80,15 +80,15 @@ header {
 }
 
 .front-content {
-    margin: 10px 20px;
+    margin: 20px;
     width: 80%;
-    height: 78%;
+    height: 50%;
     position: absolute;
 }
 
 .card-logo {
     width: 100%;
-    height: 12%;
+    height: 15%;
     background-image: url(./images/card-logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -97,15 +97,17 @@ header {
 
 .card-text {
     position: absolute;
-    top: 40%;
+    width: 100%;
+    top: 50%;
 }
 
 .card-number > h1 {
     font-size: 14px;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
-    margin-bottom: .5rem;
     word-spacing: 1.5px;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
 }
 
 .name-and-expirydate {
