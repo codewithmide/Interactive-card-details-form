@@ -6,7 +6,7 @@
     font-family: 'Space Grotesk', sans-serif;
 }
 
-body, html {
+body {
     width: 375px;
     height: 100vh;
     min-height: 100vh;
