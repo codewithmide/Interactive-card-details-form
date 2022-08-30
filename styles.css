@@ -33,7 +33,7 @@ header {
 
 .cards {
     width: 80%;
-    height: 40%;
+    height: 100%;
     position: absolute;
     display: flex;
     align-items: center;
@@ -47,12 +47,13 @@ header {
 
 .back {
     height: 100%;
-    width: 70%;
-    position: absolute;
+    width: 100%;
     background: url(./images/bg-card-back.png);
     background-repeat: no-repeat;
     background-size: contain;
-    right: 1rem;
+    background-position: center;
+    position: inherit;
+    left: 1.5rem;
     padding: 0;
 }
 
