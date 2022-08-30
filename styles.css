@@ -12,25 +12,34 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 0;
+    overflow-x: hidden;
 }
 
 header {
     width: 100%;
     height: 30%;
-    background: url(./images/bg-main-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 
+.main-bg {
+    height: 100%;
+    width: inherit;
+    background: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* CARD STARTS */
+
 .cards {
-    width: 100%;
-    height: 80%;
-    position: relative;
+    width: 70%;
+    height: 70%;
+    position: absolute;
     padding: 0;
     margin: 0;
-    top: 1rem;
-    left: 2.3rem;
+    top: 2rem;
+    right: 2rem;
+    
 }
 
 .back {
@@ -41,18 +50,32 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    right: 1rem;
+    left: 1rem;
     padding: 0;
 }
 
 
+.back-text {
+    position: relative;
+    top: 43%;
+    left: 75%;
+}
+
+
+.back-text > h1 {
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: 1.3px;
+}
 
 .front {
     width: 100%;
     height: 100%;
-    position: absolute;
-    right: 1.5rem;
-    top: 5.8rem;
+    position: inherit;
+    right: 3.5rem;
+    top: 5rem;
     background: url(./images/bg-card-front.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -60,9 +83,10 @@ header {
 }
 
 .front-content {
-    margin: 20px;
-    width: 66%;
-    height: 65%;
+    margin: 10px 20px;
+    width: 80%;
+    height: 78%;
+    position: inherit;
 }
 
 .card-logo {
@@ -80,11 +104,12 @@ header {
 }
 
 .card-number > h1 {
-    font-size: 20px;
+    font-size: 18px;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
-    margin-bottom: 1rem;
-    letter-spacing: 1.3px;
+    margin-bottom: .5rem;
+    word-spacing: 1.3px;
+    text-align: center;
 }
 
 .name-and-expirydate {
@@ -95,20 +120,95 @@ header {
 }
 
 .name-and-expirydate > p {
-    font-size: 10px;
+    font-size: 9px;
     color: hsl(0, 0%, 100%);
     font-weight: 300;
     text-transform: uppercase;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
+/* CARD ENDS */
+
+/* FORM STARTS */
+
+form {
+    padding: 30px;
+    margin-top: 3.2rem;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
 }
+
+label {
+    margin: .7rem 0 .2rem 0;
+}
+
+input {
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+::placeholder {
+    color: hsl(279, 6%, 55%);
+}
+
+.exp-month-and-year {
+    display: inline-block;
+    margin: .2rem 0 .8rem 0;
+}
+
+.exp-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: .8rem 0 0 0;
+}
+
+.deep-exp {
+    width: 50%;
+    text-align: left;
+}
+
+.deep-cvc {
+    width: 50%;
+    text-align: left;
+}
+
+.cvc {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+.short3 {
+    width: 60%;
+}
+
+.exp {
+    width: 25%;
+}
+
+.button {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* FORM ENDS */
 
 .attribution {
     font-size: 11px;
     text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
 }
 
 .attribution a {
