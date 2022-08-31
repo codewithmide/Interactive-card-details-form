@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 * {
-    padding: 0;
+    margin: 0;
     font-family: 'Space Grotesk', sans-serif;
     box-sizing: border-box;
 }
@@ -25,6 +25,8 @@ main {
     justify-content: center;
     align-items: center;
     gap: 6rem;
+    padding: 0;
+    margin: 0;
 }
 
 header {
