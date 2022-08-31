@@ -38,6 +38,10 @@ body {
     background-position: left;
 }
 
+.bg-top-mobile {
+    display: none;
+}
+
 .cards {
     position: absolute;
     height: 60%;
@@ -57,6 +61,7 @@ body {
     margin-right: 25%;
     width: 100%;
     height: 100%;
+    isolation: isolate;
 }
 
 .front-content {
@@ -140,8 +145,8 @@ body {
 }
 
 
-form {
-    width: 60%;
+#form {
+    width: 30%;
     height: 100%;
     text-transform: uppercase;
     color: hsl(278, 68%, 11%);
@@ -149,11 +154,13 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+
 }
 
 label {
-    margin: 1rem 0 .4rem 0;
-    font-size: 16px;
+    margin: 1.5rem 0 .4rem 0;
+    font-size: 12px;
 }
 
 input {
@@ -165,6 +172,11 @@ input {
     font-size: 20px;
 }
 
+input:focus {
+    outline: none !important;
+    border: 1px solid hsl(249, 99%, 64%);
+}
+
 ::placeholder {
     color: hsl(279, 6%, 55%);
     font-size: 20px;
@@ -172,7 +184,7 @@ input {
 
 .exp-month-and-year {
     display: inline-block;
-    margin: .5rem 0 1.6rem 0;
+    margin: .5rem 0 1rem 0;
 }
 
 .exp-date {
@@ -180,7 +192,7 @@ input {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 1.8rem 0 0 0;
+    margin: 1.3rem 0 0 0;
 }
 
 .deep-exp {
@@ -189,7 +201,7 @@ input {
 }
 
 .deep-cvc {
-    width: 47%;
+    width: 48%;
     text-align: left;
 }
 
@@ -207,7 +219,29 @@ input {
 }
 
 .exp {
-    width: 25%;
+    width: 22%;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+small {
+    margin-top: .2rem;
+    font-size: 11px;
+    text-transform: lowercase;
+    color: hsl(0, 100%, 66%);
+    display: none;
+}
+
+.small-text {
+    width: 100%;
+    display: flex;
+}
+
+.exp-text {
+    width: 50%;
+    text-align: left;
 }
 
 .button {
@@ -215,6 +249,36 @@ input {
     color: hsl(0, 0%, 100%);
     cursor: pointer;
     width: 100%;
+}
+
+#done {
+    width: 60%;
+    color: hsl(278, 68%, 11%);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    gap: 1rem;
+    display: none;
+}
+
+#done > h1 {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+#complete {
+    width: 38%;
+    background-color: hsl(278, 68%, 11%);
+    color: #fff;
+    font-size: 16px;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 .attribution {

@@ -25,6 +25,7 @@
 
     <div class="left">
       <div class="bg-left"></div>
+      <div class="bg-top-mobile"></div>
       <div class="cards">
         <div class="front">
           <div class="front-content">
@@ -68,11 +69,13 @@
             Cardholder Name
           </label>
           <input type="text" placeholder="e.g. Jane Appleseed" required>
+          <small>Provide a name</small>
       
           <label for="card Number">
             Card Number
           </label>
           <input type="number" placeholder="e.g. 1234 5678 9123 0000" required>
+          <small>Wrong format, numbers only</small>
       
           <div class="exp-cvc">
       
@@ -101,16 +104,35 @@
                 <input type="number" name="year" id="year" placeholder="YY" class="short2 exp"/>
       
                 <input type="number" name="cvc" id="cvc" placeholder=" e.g. 123" class="short3">
+                
       
               </div>
+
+              <div class="small-text">
+                
+                <small class="exp-text">can't be blank</small>
+                <small class="cvc-text">can't be blank</small>
       
+              </div>
+
             </div>
   
             <input type="button" name="button" id="button" value="Confirm" class="button">
-            
-          </div>
       
         </form>
+
+        <form action="#" id="done">
+          <img src="./images/icon-complete.svg" alt="icon-complete">
+          <h1>
+            Thank you!
+          </h1>
+          <p>
+            We've added your card details
+          </p>
+          <input type="button" name="complete" id="complete" value="Continue">
+        </form>
+
+      </div>
 
       </div>
     </div>
