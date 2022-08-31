@@ -17,7 +17,7 @@ body {
     max-height: 100vh;
     height: 100vh;
     height: -webkit-fill-available;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -146,10 +146,14 @@ header {
 
 /* FORM STARTS */
 
-form {
+.container {
     width: 100%;
     height: 60%;
     padding: 30px;
+    margin-top: 5rem;
+}
+
+form {
     font-size: 13px;
     text-transform: uppercase;
     color: hsl(278, 68%, 11%);
@@ -217,6 +221,7 @@ input {
     background-color: hsl(278, 68%, 11%);
     color: hsl(0, 0%, 100%);
     cursor: pointer;
+    width: 100%;
 }
 
 /* FORM ENDS */
@@ -224,8 +229,9 @@ input {
 .attribution {
     font-size: 11px;
     text-align: center;
-    bottom: 0rem;
     width: 100%;
+    margin-bottom: 10rem;height: 100%;
+
 }
 
 .attribution a {
