@@ -2,75 +2,84 @@
 
 * {
     margin: 0;
-    padding: 0;
     font-family: 'Space Grotesk', sans-serif;
-    box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
+body, html {
+    width: 375px;
     height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 
-.container {
+main {
     width: 100%;
-    height: 100%;
-    display: flex;
-    position: absolute;
-}
-
-.left {
-    width: 55%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.bg-left {
-    width: 100%;
-    height: 100%;
-    background: url(./images/bg-main-desktop.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-}
-
-.cards {
-    position: absolute;
-    height: 60%;
-    width: 35%;
+    min-height:100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    left: 15%;
-    gap: 1rem;
+    gap: 6rem;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    background: url(./images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* CARD STARTS */
+
+.back {
+    height: 100%;
+    width: 65%;
+    background: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: absolute;
+    padding: 0;
+    top: 1rem;
+}
+
+
+.back-text {
+    position: absolute;
+    width: initial;
+    height: initial;
+    top: 23.5%;
+    left: 78%;
+}
+
+
+.back-text > h1 {
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    position: absolute;
 }
 
 .front {
-    background: url(./images/bg-card-front.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 25%;
-    width: 100%;
+    width: 65%;
     height: 100%;
-}
-
-.front-content {
-    width: inherit;
-    height: inherit;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: absolute;
+    background: url(./images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
 }
 
 .card-logo {
     width: 100%;
-    height: 20%;
+    height: 15%;
     background-image: url(./images/card-logo.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -79,100 +88,73 @@ body {
 
 .card-text {
     width: 100%;
-    position: inherit;
-    height: 40%;
+    top: 50%;
 }
 
 .card-number > h1 {
-    font-size: 22px;
+    font-size: 14px;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
-    word-spacing: 2.5px;
+    word-spacing: 1.5px;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .name-and-expirydate {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     bottom: 0;
 }
 
 .name-and-expirydate > p {
-    font-size: 14px;
+    font-size: 9px;
     color: hsl(0, 0%, 100%);
     font-weight: 300;
     text-transform: uppercase;
-    width: 100%;
 }
 
-.back {
-    background: url(./images/bg-card-back.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
+/* CARD ENDS */
 
-.back > p {
-    width: inherit;
-    height: inherit;
-    text-align: right;
-    position: inherit;
-    padding: 88px 42%;
-    color: #fff;
-    font-size: 16px;
-}
+/* FORM STARTS */
 
-.right {
-    width: 45%;
-    height: 100%;
-    display: block;
-    align-items: center;
-}
-
-.right-container {
+.container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
+    padding: 30px;
 }
 
 
 form {
-    width: 60%;
+    width: 100%;
     height: 100%;
+    bottom: 0;
+    font-size: 13px;
     text-transform: uppercase;
     color: hsl(278, 68%, 11%);
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 label {
-    margin: 1rem 0 .4rem 0;
-    font-size: 16px;
+    margin: .7rem 0 .2rem 0;
 }
 
 input {
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     outline: none;
     border: 1px solid hsl(270, 3%, 87%);
-    width: 100%;
-    font-size: 20px;
 }
 
 ::placeholder {
     color: hsl(279, 6%, 55%);
-    font-size: 20px;
 }
 
 .exp-month-and-year {
     display: inline-block;
-    margin: .5rem 0 1.6rem 0;
+    margin: .2rem 0 .8rem 0;
 }
 
 .exp-date {
@@ -180,7 +162,7 @@ input {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 1.8rem 0 0 0;
+    margin: .8rem 0 0 0;
 }
 
 .deep-exp {
@@ -189,7 +171,7 @@ input {
 }
 
 .deep-cvc {
-    width: 47%;
+    width: 50%;
     text-align: left;
 }
 
@@ -203,7 +185,7 @@ input {
 
 
 .short3 {
-    width: 50%;
+    width: 60%;
 }
 
 .exp {
@@ -217,10 +199,13 @@ input {
     width: 100%;
 }
 
+/* FORM ENDS */
+
 .attribution {
     font-size: 11px;
     text-align: center;
     width: 100%;
+    bottom: 0;
 }
 
 .attribution a {
