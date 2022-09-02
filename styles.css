@@ -11,7 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -351,6 +351,10 @@ small {
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+        height: 100%;
+    }
+
     .container {
         width: 100%;
         display: block;
@@ -368,5 +372,73 @@ small {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+    .cards {
+        height: 30%;
+        width: 80%;
+    }
+
+    .front {
+        position: absolute;
+        top: 47%;
+    }
+
+    .front-content {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .card-logo {
+        height: 20%;
+    }
+    
+    .card-text {
+        height: 55%;
+    }
+    
+    .card-number > h1 {
+        font-size: 16px;
+        margin-bottom: .5rem;
+    }
+
+    .back > p {
+        padding: 73px 12%;
+        font-size: 13px;
+    }
+
+    .right {
+        width: 100%;
+        height: 62%;
+    }
+
+    .attribution {
+        width: 100%;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    .right-container,
+    .hidden-container {
+        width: 100%;
+        display: flex;
+        align-items: none;
+        justify-content: center;
+        position: relative;
+    }
+
+    #form {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+    }
+
+    #done {
+        width: 90%;
+    }
+    .hidden {
+        display: none;
     }
 }
