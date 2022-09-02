@@ -22,10 +22,9 @@
 <body>
 
   <div class="container">
-
-    <div class="left">
+    <div class="bg-top-mobile"></div>
+    <section class="left">
       <div class="bg-left"></div>
-      <div class="bg-top-mobile"></div>
       <div class="cards">
         <div class="front">
           <div class="front-content">
@@ -33,15 +32,21 @@
             
             <div class="card-text">
               <div class="card-number">
-                <h1>
+                <h1 class="card-num-update">
                   0000 0000 0000 0000
                 </h1>
                 <div class="name-and-expirydate">
-                  <p>
+                  <p class="card-name-update">
                     Jane Appleseed
                   </p>
-                  <p>
-                    00/00
+                  <p class="month-and-year">
+                    <span class="card-month-update">
+                      00
+                    </span>
+                    <span>/</span>
+                    <span class="card-year-update">
+                      00
+                    </span>
                   </p>
                 </div>
               </div>
@@ -49,13 +54,13 @@
           </div>
         </div>
         <div class="back">
-          <p>
+          <p class="cvc-update">
             000
           </p>
         </div>
       </div>
-    </div>
-    <div class="right">
+    </section>
+    <section class="right">
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/codewithmide/Interactive-card-details-form">Olumide Micheal</a>.
@@ -63,19 +68,19 @@
 
       <div class="right-container">
 
-        <form action="#" id="form">
+        <form action="#" id="form" class="form">
   
-          <label for="card holder">
+          <label for="card-holder">
             Cardholder Name
           </label>
-          <input type="text" placeholder="e.g. Jane Appleseed" required>
-          <small>Provide a name</small>
+          <input type="text" pattern="[A-Za-z]" maxlength="20" id="card-holder" placeholder="e.g. Jane Appleseed">
+          <small class="cardNameError"></small>
       
-          <label for="card Number">
+          <label for="card-number">
             Card Number
           </label>
-          <input type="number" placeholder="e.g. 1234 5678 9123 0000" required>
-          <small>Wrong format, numbers only</small>
+          <input type="text" maxlength="19" id="card-number" placeholder="e.g. 1234 5678 9123 0000">
+          <small class="cardNumberError"></small>
       
           <div class="exp-cvc">
       
@@ -99,44 +104,52 @@
       
               <div class="cvc">
       
-                <input type="number" placeholder="MM" name="month" id="month" class="short1 exp"/>
+                <input type="number" maxlength="2" placeholder="MM" name="month" id="month" class="short1 exp"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
         
-                <input type="number" name="year" id="year" placeholder="YY" class="short2 exp"/>
+                <input type="number" maxlength="2" name="year" id="year" placeholder="YY" class="short2 exp"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
       
-                <input type="number" name="cvc" id="cvc" placeholder=" e.g. 123" class="short3">
+                <input type="number" maxlength="3" name="cvc" id="cvc" placeholder=" e.g. 123" class="short3"
+                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                 
       
               </div>
 
               <div class="small-text">
-                
-                <small class="exp-text">can't be blank</small>
+                <section class="exp-month-exp-year">
+                  <small class="exp-month">can't be blank</small>
+                  <small class="exp-year">can't be blank</small>
+                </section>
                 <small class="cvc-text">can't be blank</small>
       
               </div>
 
             </div>
   
-            <input type="button" name="button" id="button" value="Confirm" class="button">
+            <button id="button" class="button">Confirm</button>
       
         </form>
 
-        <form action="#" id="done">
-          <img src="./images/icon-complete.svg" alt="icon-complete">
-          <h1>
-            Thank you!
-          </h1>
-          <p>
-            We've added your card details
-          </p>
-          <input type="button" name="complete" id="complete" value="Continue">
-        </form>
+        <section class="hidden-container hidden">
+          <div id="done">
+            <img src="./images/icon-complete.svg" alt="icon-complete">
+            <h1>
+              Thank you!
+            </h1>
+            <p>
+              We've added your card details
+            </p>
+            <button id="complete">Continue</button>
+          </div>
+        </section>
 
       </div>
 
-      </div>
-    </div>
+    </section>
+
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>

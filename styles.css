@@ -22,7 +22,7 @@ body {
 }
 
 .left {
-    width: 55%;
+    width: 53%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ body {
 }
 
 .front-content {
-    width: inherit;
+    width: 68%;
     height: inherit;
     padding: 30px;
     display: flex;
@@ -102,6 +102,7 @@ body {
     align-items: center;
     justify-content: space-between;
     bottom: 0;
+    width: 100%;
 }
 
 .name-and-expirydate > p {
@@ -109,8 +110,12 @@ body {
     color: hsl(0, 0%, 100%);
     font-weight: 300;
     text-transform: uppercase;
-    width: 100%;
 }
+
+.card-name-update {
+    margin-right: 20%;
+}
+
 
 .back {
     background: url(./images/bg-card-back.png);
@@ -131,13 +136,15 @@ body {
 }
 
 .right {
-    width: 45%;
+    width: 47%;
     height: 100%;
     display: block;
     align-items: center;
+    position: relative;
 }
 
-.right-container {
+.right-container,
+.hidden-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -145,8 +152,9 @@ body {
 }
 
 
+
 #form {
-    width: 30%;
+    width: 60%;
     height: 100%;
     text-transform: uppercase;
     color: hsl(278, 68%, 11%);
@@ -155,7 +163,6 @@ body {
     flex-direction: column;
     justify-content: center;
     position: absolute;
-
 }
 
 label {
@@ -170,6 +177,15 @@ input {
     border: 1px solid hsl(270, 3%, 87%);
     width: 100%;
     font-size: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    margin-top: .5rem;
 }
 
 input:focus {
@@ -234,12 +250,24 @@ small {
     display: none;
 }
 
+
 .small-text {
     width: 100%;
     display: flex;
 }
 
-.exp-text {
+.exp-month-exp-year {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp-month {
+    width: 50%;
+    text-align: left;
+}
+
+.exp-year {
     width: 50%;
     text-align: left;
 }
@@ -253,27 +281,45 @@ small {
 
 #done {
     width: 60%;
-    color: hsl(278, 68%, 11%);
+    color: hsl(278, 73%, 32%);
     font-weight: 500;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     position: absolute;
-    right: 0;
     gap: 1rem;
+}
+
+.hidden {
     display: none;
 }
+
+.center-img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.right-container > .hide {
+    display: none;
+}
+
 
 #done > h1 {
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 500;
     letter-spacing: 2px;
+
+}
+
+#done > img {
+    width: fit-content;
 }
 
 #complete {
-    width: 38%;
+    width: 100%;
     background-color: hsl(278, 68%, 11%);
     color: #fff;
     font-size: 16px;
@@ -289,4 +335,13 @@ small {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* ERROR MESSAGES */
+
+.cardNameError {
+    margin-top: .2rem;
+    font-size: 11px;
+    text-transform: lowercase;
+    color: hsl(0, 100%, 66%);
 }
