@@ -109,7 +109,7 @@
                 <input type="number" required maxlength="2" name="year" id="year" placeholder="YY" class="short2 exp"
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
       
-                <input type="number" required maxlength="3" name="cvc" id="cvc" placeholder=" e.g. 123" class="short3"
+                <input type="number" maxlength="3" name="cvc" id="cvc" placeholder=" e.g. 123" class="short3" required
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                 
       
@@ -139,7 +139,7 @@
             <p>
               We've added your card details
             </p>
-            <button id="complete">Continue</button>
+            <button id="complete"><a class="refresh" href="index.html">Continue</a></button>
           </div>
         </section>
 
